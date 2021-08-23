@@ -1,6 +1,7 @@
 import sympy as sy 
 from sympy import *
 import math
+import numpy as np
 from math import copysign 
 from mpmath import mp, mpf
 import matplotlib.pyplot as plt
@@ -150,15 +151,18 @@ print("raiz = " + str(r2))
 print("-----------------Errores---------------")
 errores(r1,r2,funcion,valor)
 print("---------------------------------------")
-
+"""
 
 # graficacion
-plt.plot(arregloTolerancia, arregloIteracionesBiseccion,'o--r')
-plt.plot(arregloTolerancia, arregloIteracionesNewton,'o--b' )
+plt.plot(arregloTolerancia, arregloIteracionesBiseccion,'x--r',linewidth=0.5)
+plt.plot(arregloTolerancia, arregloIteracionesNewton,'x--b',linewidth=0.5 )
 
+plt.yticks([0,2,4,6,8,10,12,16,20,40,60,80,100,150,200])
+plt.yscale("linear")
 plt.xlabel('Tolerancia')
 plt.ylabel('Numero Iteraciones')
-plt.title('Comparacion entre Biseccion y Newton')
+plt.title('Comparacion entre Biseccion y Newton Funcion ' + str(funcion))
   
 plt.show()    
 
+"""
